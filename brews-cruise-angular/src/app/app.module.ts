@@ -1,25 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
+import { Observable } from 'rxjs';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AgmCoreModule } from '@agm/core';
-import { TestComponent } from './src/app/test/test.component';
-import { AboutComponent } from './src/app/about/about.component';
-import { AddFormComponent } from './src/app/add-form/add-form.component';
-import { FavoriteItemComponent } from './src/app/favorite-item/favorite-item.component';
-import { FavoritesComponent } from './src/app/favorites/favorites.component';
-import { HeaderComponent } from './src/app/header/header.component';
-import { LandingComponent } from './src/app/landing/landing.component';
-import { LoginComponent } from './src/app/login/login.component';
-import { MapComponent } from './src/app/map/map.component';
-import { SignupComponent } from './src/app/signup/signup.component';
+
+// import { AuthService } from './auth.service';
+// import { DataService } from './data-storage.service';
+// import { ApiKeyService } from './apikey.service';
+// import { FavoritesService } from './favorites.service';
+// import { FirebaseService } from './firebase.service';
+
+import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
+import { AddFormComponent } from './add-form/add-form.component';
+import { FavoriteItemComponent } from './favorite-item/favorite-item.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { HeaderComponent } from './header/header.component';
+import { LandingComponent } from './landing/landing.component';
+import { LoginComponent } from './login/login.component';
+import { MapComponent } from './map/map.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
     AboutComponent,
     AddFormComponent,
     FavoriteItemComponent,
@@ -28,17 +38,29 @@ import { SignupComponent } from './src/app/signup/signup.component';
     LandingComponent,
     LoginComponent,
     MapComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'cli-universal-demo'}),
+    AppRoutingModule,
     CommonModule,
     FormsModule,
+    // HttpModule,
+    RouterModule,
+    // FavoritesRoutingModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
     	apiKey: 'AIzaSyDAe01cMlK4IWJMX4_KoTn9gSEKnfydK0M'
     })
   ],
-  providers: [],
+  providers: [
+    // FavoritesService,
+    // AuthService,
+    // ApiKeySevice,
+    // DataService,
+    // FirebaseService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
