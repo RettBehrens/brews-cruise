@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BrewsCruise ╭∩╮（︶︿︶）╭∩╮';
+  lat: number = 39.758205499999995;
+  lng: number = -105.0074547;
 }

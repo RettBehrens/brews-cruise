@@ -1,41 +1,41 @@
-import { db } from '../models';
-let DB = db.models;
+// import { db } from '../models';
+// let DB = db.models;
 
 var hotSpringsDummy = [
 	{
     name: "Mount Princeton Hot Springs",
-    latitude: "38.733",
-    longitude: "106.162",
+    latitude: 38.733,
+    longitude: -106.162,
     temperature: "133°"
 	},
   {
     name: "Wagon Wheel Gap Hot Springs",
-    latitude: "37.747",
-    longitude: "106.831",
+    latitude: 37.747,
+    longitude: -106.831,
     temperature: "135°"
 	},
   {
     name: "Pagosa Springs",
-    latitude: "37.263",
-    longitude: "107.011",
+    latitude: 37.263,
+    longitude: -107.011,
     temperature: "136°"
 	},
 	{
 		name: "Ouray Hot Springs",
-		latitude: "38.021",
-    longitude: "107.672",
+		latitude: 38.021,
+    longitude: -107.672,
     temperature: "156°"
 	},
 	{
 		name: "Glenwood Springs",
-    latitude: "39.548",
-    longitude: "107.322",
+    latitude: 39.548,
+    longitude: -107.322,
     temperature: "124°"
 	},
 	{
 		name: "Steamboat Springs",
-    latitude: "40.483",
-    longitude: "106.827",
+    latitude: 40.483,
+    longitude: -106.827,
     temperature: "102°"
 	}
 ];
