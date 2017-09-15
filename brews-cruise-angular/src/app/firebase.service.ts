@@ -18,11 +18,11 @@ export class FirebaseService {
 			console.log("Initializing firebase");
 			this.firebaseInitialize = true;
 			firebase.initializeApp({
-		      	apiKey: process.env.firebaseApiKey || this.apiKeyService.firebaseApiKey,
-		      	authDomain: process.env.firebaseAuthDomain || this.apiKeyService.firebaseAuthDomain
-	    	});
+      	apiKey: this.apiKeyService.firebaseApiKey,
+      	authDomain: this.apiKeyService.firebaseAuthDomain
+    	});
 		} 
 		
-	    return this.firebaseService.asObservable();
+	  return this.firebaseService.asObservable();
 	}
 }

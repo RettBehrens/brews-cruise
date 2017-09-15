@@ -5,15 +5,15 @@ var sequelize = new Sequelize('postgres://everettbehrens@localhost:5432/brews_cr
 
 var User = sequelize.import("./user");
 var HotSpring = sequelize.import("./hotSpring");
-var Brewery = sequelize.import("./brewery");
+// var Brewery = sequelize.import("./brewery");
 
 // NEEDS ERD HERE
 
 const db = <any>{};
 db.models = {
   User,
-  HotSpring,
-  Brewery
+  HotSpring
+  // Brewery
 };
 
 //Export models and Sequelize for seed and dbSetup

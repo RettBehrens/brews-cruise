@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
@@ -9,11 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AgmCoreModule } from '@agm/core';
 
-// import { AuthService } from './auth.service';
-// import { DataService } from './data-storage.service';
-// import { ApiKeyService } from './apikey.service';
+import { AuthService } from './auth.service';
+import { DataService } from './data-storage.service';
+import { ApiKeyService } from './apikey.service';
+import { HotSpringsService } from './hotSprings.service';
 // import { FavoritesService } from './favorites.service';
-// import { FirebaseService } from './firebase.service';
+import { FirebaseService } from './firebase.service';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -46,7 +48,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    // HttpModule,
+    HttpModule,
     RouterModule,
     // FavoritesRoutingModule,
     ReactiveFormsModule,
@@ -56,10 +58,11 @@ import { HomeComponent } from './home/home.component';
   ],
   providers: [
     // FavoritesService,
-    // AuthService,
-    // ApiKeySevice,
-    // DataService,
-    // FirebaseService
+    AuthService,
+    ApiKeyService,
+    DataService,
+    FirebaseService,
+    HotSpringsService
   ],
   bootstrap: [AppComponent]
 })

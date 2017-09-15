@@ -41,7 +41,7 @@ var hotSpringsDummy = [
 ];
 
 var springs = function() {
-  return DB.HotSprings.bulkCreate(hotSpringsDummy);
+  return DB.HotSpring.bulkCreate(hotSpringsDummy);
 };
 
 springs();
