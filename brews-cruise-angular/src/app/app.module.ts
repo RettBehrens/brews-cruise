@@ -8,8 +8,6 @@ import { Observable } from 'rxjs';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { AgmCoreModule } from '@agm/core';
-
 import { AuthService } from './auth.service';
 import { DataService } from './data-storage.service';
 import { ApiKeyService } from './apikey.service';
@@ -52,9 +50,6 @@ import { HomeComponent } from './home/home.component';
     RouterModule,
     // FavoritesRoutingModule,
     ReactiveFormsModule,
-    AgmCoreModule.forRoot({
-    	apiKey: 'AIzaSyDAe01cMlK4IWJMX4_KoTn9gSEKnfydK0M'
-    })
   ],
   providers: [
     // FavoritesService,
