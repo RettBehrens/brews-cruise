@@ -5,7 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { FavoritesComponent } from './favorites/favorites.component';
+// import { FavoritesComponent } from './favorites/favorites.component';
 
 const routes: Routes = [
 	{
@@ -27,10 +27,6 @@ const routes: Routes = [
 	{
 		path: 'about',
 		component: AboutComponent
-	},
-	{
-		path: 'favorites',
-		component: FavoritesComponent
 	},
 ];
 

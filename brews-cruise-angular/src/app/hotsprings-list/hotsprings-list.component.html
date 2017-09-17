@@ -1,0 +1,7 @@
+<div>
+	<ul>
+		<li *ngFor="let hotspring of hotsprings | async">
+			{{hotspring.$key}} : {{hotspring.$value}}
+		</li>
+	</ul>
+</div>
