@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HotspringsListComponent } from './hotsprings-list.component';
+import { HotspringsComponent } from './hotsprings.component';
 
-describe('HotspringsListComponent', () => {
-  let component: HotspringsListComponent;
-  let fixture: ComponentFixture<HotspringsListComponent>;
+describe('HotspringsComponent', () => {
+  let component: HotspringsComponent;
+  let fixture: ComponentFixture<HotspringsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HotspringsListComponent ]
+      declarations: [ HotspringsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HotspringsListComponent);
+    fixture = TestBed.createComponent(HotspringsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

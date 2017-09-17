@@ -1,0 +1,25 @@
+<div *ngIf="hotspring">
+  <h2>{{hotspring.name}} details!</h2>
+  <div>
+    <label>Name: </label>{{' ' + hotspring.name}}
+  </div>
+  <div>
+    <label>Address: </label><a href="http://maps.google.com/?q={{hotspring.address}}">{{' ' + hotspring.address}}</a>
+  </div>
+  <div>
+    <label>Latitude: </label>{{' ' + hotspring.latitude}}
+  </div>
+  <div>
+    <label>Longitude: </label>{{' ' + hotspring.longitude}}
+  </div>
+  <div>
+    <label>Temperature: </label>{{' ' + hotspring.temperature}}
+  </div>
+  <div>
+    <label>Hot Springs Link: </label><a href="{{hotspring.hotspringsLink}}"> Take Me There!</a>
+  </div>
+  <div>
+    <label>Nearby Breweries on Yelp: </label> <a href="{{hotspring.nearbyBreweriesOnYelp}}"> Show Me The Breweries!</a>
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>

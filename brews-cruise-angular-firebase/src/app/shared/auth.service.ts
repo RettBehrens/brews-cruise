@@ -5,25 +5,40 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
-  private authState: Observable<firebase.User>
-  private currentUser: firebase.User = null;
-constructor(public afAuth: AngularFireAuth) {
-    this.authState = this.afAuth.authState;
-    this.authState.subscribe(user => {
-      if (user) {
-        this.currentUser = user;
-      } else {
-        this.currentUser = null;
-      }
-    });
-  }
-  getAuthState() {
-    return this.authState;
+  user: Observable<firebase.User>;
+
+  constructor(private firebaseAuth: AngularFireAuth) {
+    this.user = firebaseAuth.authState;
   }
 
-  loginWithGoogle() {
-  return this.afAuth.auth.signInWithPopup(
-    new firebase.auth.GoogleAuthProvider());
-}
+  signup(email: string, password: string) {
+    this.firebaseAuth
+      .auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(value => {
+        console.log('Success!', value);
+      })
+      .catch(err => {
+        console.log('Something went wrong:',err.message);
+      });    
+  }
+
+  login(email: string, password: string) {
+    this.firebaseAuth
+      .auth
+      .signInWithEmailAndPassword(email, password)
+      .then(value => {
+        console.log('Nice, it worked!');
+      })
+      .catch(err => {
+        console.log('Something went wrong:',err.message);
+      });
+  }
+
+  logout() {
+    this.firebaseAuth
+      .auth
+      .signOut();
+  }
 
 }

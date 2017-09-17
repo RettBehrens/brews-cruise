@@ -1,0 +1,15 @@
+<h2>Hot Springs of Colorado</h2>
+<div>
+<ul class="hotsprings">
+  <li *ngFor="let hotspring of hotsprings" (click)="onSelect(hotspring)"
+      [class.selected]="hotspring === selectedHotspring">
+    <span>{{hotspring.name}}</span>
+  </li>
+</ul>
+</div>
+<div *ngIf="selectedHotspring" class="col-6">
+  <h2>
+    Show me more about {{selectedHotspring.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

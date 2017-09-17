@@ -31,7 +31,7 @@ import { LoginComponent } from './login/login.component';
 // import { MapComponent } from './map/map.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-import { HotspringsListComponent } from './hotsprings-list/hotsprings-list.component';
+// import { HotspringsListComponent } from './hotsprings-list/hotsprings-list.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDgqxZsaq-KeYKfXSr-j-_kkxW3mEzCXI8",
@@ -55,7 +55,7 @@ export const firebaseConfig = {
     // MapComponent,
     SignupComponent,
     HomeComponent,
-    HotspringsListComponent
+    // HotspringsListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'cli-universal-demo'}),

@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
