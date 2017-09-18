@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  photo: string;
+  
   constructor() { }
 
   ngOnInit() {
+  	// this.photo = "/assets/images/robson-hatsukami-morgan-116208.jpg";
   }
 
 }

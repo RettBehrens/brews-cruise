@@ -1,5 +1,9 @@
+<div class ="opaque">
 <div *ngIf="hotspring">
   <h2>{{hotspring.name}} details!</h2>
+  <div>
+    <img class="img-circle" style="height: 200px" src="{{hotspring.imgUrl}}">
+  </div>
   <div>
     <label>Name: </label>{{' ' + hotspring.name}}
   </div>
@@ -22,4 +26,5 @@
     <label>Nearby Breweries on Yelp: </label> <a href="{{hotspring.nearbyBreweriesOnYelp}}"> Show Me The Breweries!</a>
   </div>
   <button (click)="goBack()">Back</button>
+</div>
 </div>
