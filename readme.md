@@ -11,8 +11,8 @@ This app currently uses in memory web api and in memory data service to mock api
 Future iterations will integrate Firebase for the database and consume a hot springs api that I'm in the process of building with plans to host in the long run.
 
 Wireframes
-(/src/assets/images/IMG_4645.JPG)
-(/src/assets/images/IMG_4646.JPG)
+(src/assets/images/IMG_4645.JPG)
+(src/assets/images/IMG_4646.JPG)
 
 Trello
 https://trello.com/b/4BLR5Z39/brewscruise
