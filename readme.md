@@ -18,4 +18,4 @@ Trello
 https://trello.com/b/4BLR5Z39/brewscruise
 
 Demo Online
-http://minor-degree.surge.sh
+http://lonely-blood.surge.sh
