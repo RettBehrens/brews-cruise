@@ -36,6 +36,15 @@ export class HotspringsComponent implements OnInit {
       });
   }
 
+  delete(hotspring: Hotspring): void {
+    this.hotspringService
+        .delete(hotspring.id)
+        .then(() => {
+          this.hotsprings = this.hotsprings.filter(h => h !== hotspring);
+          if (this.selectedHotspring === hotspring) { this.selectedHotspring = null; }
+        });
+  }
+
   ngOnInit(): void {
   	this.getHotsprings();
     // this.photo = "/assets/images/robson-hatsukami-morgan-116208.jpg";
