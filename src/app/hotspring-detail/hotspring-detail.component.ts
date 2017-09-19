@@ -31,4 +31,9 @@ export class HotspringDetailComponent implements OnInit {
     this.location.back();
   }
 
+  updateHotspring(): void {
+    this.hotspringService.updateHotspring(this.hotspring);
+    this.goBack();
+  }
+
 }

@@ -3,12 +3,14 @@
   <h2>{{hotspring.name}} details!</h2>
   <div>
     <img class="img-circle" style="height: 200px" src="{{hotspring.imgUrl}}">
+    <input [(ngModel)]="hotspring.imgUrl" placeholder="add an image url" />
   </div>
   <div>
     <label>Name: </label>{{' ' + hotspring.name}}
   </div>
   <div>
     <label>Address: </label><a href="http://maps.google.com/?q={{hotspring.address}}">{{' ' + hotspring.address}}</a>
+    <input [(ngModel)]="hotspring.address" placeholder="add an address" />
   </div>
   <div>
     <label>Latitude: </label>{{' ' + hotspring.latitude}}
@@ -21,10 +23,13 @@
   </div>
   <div>
     <label>Hot Springs Link: </label><a href="{{hotspring.hotspringsLink}}"> Take Me There!</a>
+    <input [(ngModel)]="hotspring.hotspringsLink" placeholder="add a link to their website" />
   </div>
   <div>
     <label>Nearby Breweries on Yelp: </label> <a href="{{hotspring.nearbyBreweriesOnYelp}}"> Show Me The Breweries!</a>
+    <input [(ngModel)]="hotspring.nearbyBreweriesOnYelp" placeholder="add a link to nearby breweries on Yelp" />
   </div>
   <button (click)="goBack()">Back</button>
+  <button (click)="updateHotspring()">Update</button>
 </div>
 </div>

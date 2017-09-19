@@ -36,6 +36,15 @@ export class HotspringService {
       .catch(this.handleError);
   }
 
+  updateHotspring(hotspring: Hotspring): Promise<Hotspring> {
+    const url = `${this.hotspringsUrl}/${hotspring.id}`;
+    return this.http
+      .put(url, JSON.stringify(hotspring), { headers: this.headers })
+      .toPromise()
+      .then(() => hotspring)
+      .catch(this.handleError);
+  }
+
   delete(id: number): Promise<void> {
     const url = `${this.hotspringsUrl}/${id}`;
     return this.http.delete(url, {headers: this.headers})
