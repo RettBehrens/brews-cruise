@@ -1,9 +1,11 @@
 <h2>Hot Springs of Colorado</h2>
 <div>
-  <label>Add Hot Springs:</label> <input #hotspringsName placeholder="hot springs name" />
-  <button (click)="add(hotspringsName.value); hotspringsName.value=''">
-    Add
-  </button>
+  <label>Add Hot Springs:</label> 
+  <input [(ngModel)]="newHotspring.name" placeholder="hot springs name" name="name" />
+  <input [(ngModel)]="newHotspring.latitude" placeholder="hot springs latitude" name="latitude" />
+  <input [(ngModel)]="newHotspring.longitude" placeholder="hot springs longitude" name="longitude" />
+  <input [(ngModel)]="newHotspring.temperature" placeholder="hot springs temperature" name="temperature" />
+  <button (click)="createHotspring(newHotspring)">Add</button>
 </div>
 <div *ngIf="selectedHotspring">
   <h2>

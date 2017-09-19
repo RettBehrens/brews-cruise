@@ -28,9 +28,9 @@ export class HotspringService {
   		.catch(this.handleError);
   }
 
-  create(name: string): Promise<Hotspring> {
+  createHotspring(hotspring: Hotspring): Promise<Hotspring> {
     return this.http
-      .post(this.hotspringsUrl, JSON.stringify({name: name}), {headers: this.headers})
+      .post(this.hotspringsUrl, JSON.stringify(hotspring), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data as Hotspring)
       .catch(this.handleError);

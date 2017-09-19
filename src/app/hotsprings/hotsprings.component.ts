@@ -14,6 +14,7 @@ export class HotspringsComponent implements OnInit {
 
 	hotsprings: Hotspring[];
 	selectedHotspring: Hotspring;
+  newHotspring: Hotspring;
   photo: string;
 
   constructor(
@@ -26,10 +27,8 @@ export class HotspringsComponent implements OnInit {
   		.then(hotsprings => this.hotsprings = hotsprings);
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.hotspringService.create(name)
+  createHotspring(hotspring: Hotspring): void {
+    this.hotspringService.createHotspring(hotspring)
       .then(hotspring => {
         this.hotsprings.push(hotspring);
         this.selectedHotspring = null;
@@ -47,6 +46,7 @@ export class HotspringsComponent implements OnInit {
 
   ngOnInit(): void {
   	this.getHotsprings();
+    this.newHotspring = new Hotspring();
     // this.photo = "/assets/images/robson-hatsukami-morgan-116208.jpg";
   }
 

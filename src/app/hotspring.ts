@@ -4,7 +4,7 @@ export class Hotspring {
 	latitude: string;
 	longitude: string;
 	temperature: string;
-	hotspringsYelp: string;
-	closestBrewery: string;
-	breweryYelp: string;
+	hotspringsLink: string;
+	nearbyBreweriesOnYelp: string;
+	imgUrl: string;
 }
