@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-.bg-image {
+
+body {
+	min-height: 100vh;
 	background-image: url('assets/images/robson-hatsukami-morgan-116208.jpg');
 	background-size: cover;
+	height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

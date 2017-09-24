@@ -32,6 +32,7 @@ export class HotspringDetailComponent implements OnInit {
   }
 
   updateHotspring(): void {
+    event.preventDefault();
     this.hotspringService.updateHotspring(this.hotspring);
     this.goBack();
   }

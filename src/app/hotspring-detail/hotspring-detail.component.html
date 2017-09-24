@@ -2,10 +2,6 @@
 <div *ngIf="hotspring">
   <h2>{{hotspring.name}} details!</h2>
   <div>
-    <img class="img-circle" style="height: 200px" src="{{hotspring.imgUrl}}">
-    <input [(ngModel)]="hotspring.imgUrl" placeholder="add an image url" />
-  </div>
-  <div>
     <label>Name: </label>{{' ' + hotspring.name}}
   </div>
   <div>

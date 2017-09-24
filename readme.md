@@ -1,10 +1,8 @@
-BrewsCruise will be a full-stack app. Users will be able to see a map of hot springs across Colorado, click on an instance and see nearby breweries.. for obvious important reasons.
+BrewsCruise will be an Angular app. Users will be able to see a list of hot springs across Colorado, click on an instance and see nearby breweries.. for obvious important reasons.
 
-In addition, users can add instances to the map that aren't already listed.
+In addition, users can add instances to the list that aren't already included.
 
 This app will be built on Angular.
-
-This app will use a database. Probably Firebase.
 
 This app currently uses in memory web api and in memory data service to mock api and database functionality.
 
